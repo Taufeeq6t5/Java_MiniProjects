@@ -5,7 +5,7 @@ public class Calculator{
         Scanner sc=new Scanner(System.in);
         int choice;
         double result=0;
-        while(1){
+        do{
         System.out.println("\n******Calculator Menu******");
         System.out.println("1.Addition.");
         System.out.println("2.Subtraction");
@@ -16,13 +16,13 @@ public class Calculator{
         System.out.println("7.Square");
         System.out.println("8.Exit");
 
-        System.out.println("Enter your choice:");
+        System.out.print("Enter your choice:");
         choice =sc.nextInt();
 
         if(choice>=1 && choice<=6 ){
             System.out.print("Enter the first number:");
             int a=sc.nextInt();
-            System.out.println("Enter the second number:");
+            System.out.print("Enter the second number:");
             int b=sc.nextInt();
 
             switch(choice){
@@ -38,21 +38,25 @@ public class Calculator{
                 System.out.println("Result= "+result);
                 break;
 
-                case 4:if(b==0)
+                case 4:if(b==0){
                 System.out.println("Error Division By Zero..!");
-                else
+                }else{
+                
                 result=a/b;
                 System.out.println("Result= "+result);
+                }
                 break;
 
-                case 5:if(b==0)
+                case 5:if(b==0){
                 System.out.println("Error Modulus By Zero..!");
-                else
+                }else{
+                
                 result=a%b;
                 System.out.println("Result= "+result);
+                }
                 break;
 
-                case 6:result=math.pow(a,b);
+                case 6:result=Math.pow(a,b);
                 System.out.println("Result= "+result);
                 break;
 
@@ -61,7 +65,7 @@ public class Calculator{
         }
 
         else if(choice==7){
-            System.out.println("Enter the number:");
+            System.out.print("Enter the number:");
             int num=sc.nextInt();
 
             result=num*num;
@@ -75,20 +79,9 @@ public class Calculator{
             System.out.println("Invalid Choice!");
         }
 
+        }while(choice!=8);
 
-
-        }
-
-
-
-
-
-
-
-
-
-
-
+        sc.close();
 
 }
 }
