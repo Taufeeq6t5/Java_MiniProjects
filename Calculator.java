@@ -56,7 +56,7 @@ public class Calculator{
                 }
                 break;
 
-                case 6:result=Math.pow(a,b);
+                case 6:result=Math.pow(a,b);        //Math.pow is used to find the power of the number.
                 System.out.println("Result= "+result);
                 break;
 
@@ -79,7 +79,7 @@ public class Calculator{
             System.out.println("Invalid Choice!");
         }
 
-        }while(choice!=8);
+        }while(choice!=8);        //this loop helps the menu to run again & again until the user chooses exit option.
 
         sc.close();
 
