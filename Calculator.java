@@ -6,6 +6,7 @@ public class Calculator{
         int choice;
         double result=0;
         do{
+            System.out.println("\n***welcome to calculator***");
         System.out.println("\n******Calculator Menu******");
         System.out.println("1.Addition.");
         System.out.println("2.Subtraction");
